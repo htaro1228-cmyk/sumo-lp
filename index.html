@@ -9,6 +9,7 @@
 body {
   margin: 0;
   background: #000;
+  text-align: center;
   font-family: sans-serif;
 }
 
@@ -23,38 +24,45 @@ img {
   position: fixed;
   bottom: 0;
   width: 100%;
-  max-width: 600px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(to right, #ff0000, #ff9900);
+  background: #000;
+  padding: 10px;
+}
+
+.cta a {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 18px;
   color: #fff;
-  text-align: center;
-  padding: 16px;
-  font-size: 20px;
-  font-weight: bold;
   text-decoration: none;
+  background: linear-gradient(90deg, #ff0000, #ff7a00);
+  border-radius: 10px;
+  font-weight: bold;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ① ファーストビュー -->
+<!-- ① -->
 <img src="https://i.imgur.com/1Rk1HEV.jpg">
 
-<!-- ② ゲーム説明 -->
+<!-- ②（修正済み） -->
 <img src="https://i.imgur.com/OyuMYon.jpg">
 
-<!-- ③ 参加方法 -->
+<!-- ③ -->
 <img src="https://i.imgur.com/w4Q9f5d.jpg">
 
-<!-- ④ クロージング（今回確定） -->
+<!-- ④（ここが今回の修正ポイント） -->
 <img src="https://i.imgur.com/AmTrLIN.jpg">
 
-<!-- CTAボタン -->
-<a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdbs_oryQ-_8PX5TaDCROcWScMCzBX185ET9l-UCoiaOx6o2Q/viewform" target="_blank">
-今すぐ無料で応募する
-</a>
+<!-- CTA -->
+<div class="cta">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbs_oryQ-_8PX5TaDCROcWScMCzBX185ET9l-UCoiaOx6o2Q/viewform?usp=header">
+    今すぐ無料で応募する
+  </a>
+</div>
 
 </body>
 </html>
