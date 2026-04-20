@@ -1,68 +1,109 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>相撲懸賞キャンペーン</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>相撲懸賞キャンペーン</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  margin: 0;
-  background: #000;
-  text-align: center;
-  font-family: sans-serif;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    }
 
-img {
-  width: 100%;
-  max-width: 600px;
-  display: block;
-  margin: 0 auto;
-}
+    body {
+      text-align: center;
+    }
 
-.cta {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #000;
-  padding: 10px;
-}
+    .lp-wrap {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      background: #000;
+    }
 
-.cta a {
-  display: block;
-  width: 90%;
-  margin: 0 auto;
-  padding: 15px;
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  background: linear-gradient(90deg, #ff0000, #ff7a00);
-  border-radius: 10px;
-  font-weight: bold;
-}
-</style>
+    .lp-wrap img {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    .cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      padding: 10px 12px;
+      z-index: 9999;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    .cta a {
+      display: block;
+      width: 100%;
+      max-width: 576px;
+      margin: 0 auto;
+      padding: 15px 16px;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(90deg, #ff0000 0%, #ff7a00 100%);
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(255, 80, 0, 0.35);
+    }
+
+    /* 固定ボタンで最後の画像が隠れないように余白を追加 */
+    .bottom-space {
+      height: 88px;
+      background: #000;
+    }
+
+    @media (max-width: 480px) {
+      .cta a {
+        font-size: 17px;
+        padding: 14px 14px;
+      }
+
+      .bottom-space {
+        height: 84px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- ① -->
-<img src="https://i.imgur.com/1Rk1HEV.jpg">
+  <div class="lp-wrap">
+    <!-- ① ファーストビュー -->
+    <img src="https://i.imgur.com/1Rk1HEV.jpg" alt="これが相撲。">
 
-<!-- ②（修正済み） -->
-<img src="https://i.imgur.com/OyuMYon.jpg">
+    <!-- ② ゲーム説明 -->
+    <img src="https://i.imgur.com/OyuMYon.jpg" alt="3人選んで点数勝負">
 
-<!-- ③ -->
-<img src="https://i.imgur.com/w4Q9f5d.jpg">
+    <!-- ③ 参加方法 -->
+    <img src="https://i.imgur.com/w4Q9f5d.jpg" alt="参加方法">
 
-<!-- ④（ここが今回の修正ポイント） -->
-<img src="https://i.imgur.com/AmTrLIN.jpg">
+    <!-- ④ クロージング -->
+    <img src="https://i.imgur.com/cQHI477.jpg" alt="今すぐ応募">
 
-<!-- CTA -->
-<div class="cta">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbs_oryQ-_8PX5TaDCROcWScMCzBX185ET9l-UCoiaOx6o2Q/viewform?usp=header">
-    今すぐ無料で応募する
-  </a>
-</div>
+    <div class="bottom-space"></div>
+  </div>
+
+  <!-- 固定CTAボタン -->
+  <div class="cta">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbs_oryQ-_8PX5TaDCROcWScMCzBX185ET9l-UCoiaOx6o2Q/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+      今すぐ無料で応募する
+    </a>
+  </div>
 
 </body>
 </html>
